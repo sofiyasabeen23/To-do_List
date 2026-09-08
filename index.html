@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="TaskFlow is a simple task management application built using HTML, CSS and JavaScript.">
+
+    <title>TaskFlow | To-Do Manager</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            Task<span>Flow</span>
+        </div>
+
+        <div class="header-right">
+
+            <span class="date" id="todayDate"></span>
+
+            <button
+                class="theme-button"
+                id="themeButton"
+                aria-label="Toggle theme">
+                ◐
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Introduction -->
+        <section class="intro">
+
+            <p class="eyebrow">
+                MY DAILY TASKS
+            </p>
+
+            <h1>
+                Get things<br>
+                <span>done.</span>
+            </h1>
+
+            <p class="intro-text">
+                Add your tasks, keep track of your work,
+                and complete them one by one.
+            </p>
+
+        </section>
+
+
+        <!-- Add Task -->
+        <section class="add-task-card">
+
+            <div class="input-wrapper">
+
+                <span class="input-icon">+</span>
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a task..."
+                    maxlength="150"
+                    autocomplete="off">
+
+            </div>
+
+            <button
+                class="add-button"
+                id="addButton">
+                Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Search -->
+        <div class="search-wrapper">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks..."
+                autocomplete="off">
+
+        </div>
+
+
+        <!-- Task Dashboard -->
+        <section class="task-dashboard">
+
+            <!-- Pending Tasks -->
+            <div class="task-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">
+                            TO DO
+                        </p>
+
+                        <h2>
+                            Pending Tasks
+                        </h2>
+                    </div>
+
+                    <div
+                        class="count pending-count"
+                        id="pendingCount">
+                        0 pending
+                    </div>
+
+                </div>
+
+                <div
+                    class="task-list"
+                    id="pendingList">
+                </div>
+
+            </div>
+
+
+            <!-- Completed Tasks -->
+            <div class="task-section completed-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">
+                            FINISHED
+                        </p>
+
+                        <h2>
+                            Completed Tasks
+                        </h2>
+                    </div>
+
+                    <div
+                        class="count completed-count"
+                        id="completedCount">
+                        0 completed
+                    </div>
+
+                </div>
+
+                <div
+                    class="task-list"
+                    id="completedList">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Productivity -->
+        <section class="productivity-card">
+
+            <div class="productivity-icon">
+                ✓
+            </div>
+
+            <div class="productivity-info">
+
+                <p class="productivity-label">
+                    PRODUCTIVITY
+                </p>
+
+                <h3 id="productivityMessage">
+                    Start by adding your first task.
+                </h3>
+
+            </div>
+
+            <div class="progress-container">
+
+                <div class="progress-bar">
+                    <div
+                        class="progress-fill"
+                        id="progressFill">
+                    </div>
+                </div>
+
+                <span id="progressText">
+                    0%
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

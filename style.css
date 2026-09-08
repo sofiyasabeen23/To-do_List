@@ -1,0 +1,817 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7f8f7;
+    color: #202824;
+    min-height: 100vh;
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 24px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #197653;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.date {
+    color: #777f7b;
+    font-size: 12px;
+}
+
+.theme-button {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #d7ddd9;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #303934;
+
+    cursor: pointer;
+    font-size: 17px;
+
+    transition: 0.2s ease;
+}
+
+.theme-button:hover {
+    border-color: #197653;
+    color: #197653;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    padding: 55px 0 40px;
+}
+
+.eyebrow {
+    color: #197653;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 14px;
+}
+
+.intro h1 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(52px, 8vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+.intro h1 span {
+    color: #197653;
+}
+
+.intro-text {
+    color: #727b76;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    max-width: 420px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   ADD TASK
+========================================= */
+
+.add-task-card {
+    background: #ffffff;
+
+    border: 1px solid #dfe4e1;
+    border-radius: 12px;
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.input-wrapper {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 13px;
+}
+
+.input-icon {
+    color: #197653;
+    font-size: 24px;
+}
+
+.input-wrapper input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #202824;
+
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.input-wrapper input::placeholder {
+    color: #9da5a1;
+}
+
+.add-button {
+    border: none;
+
+    background: #197653;
+    color: white;
+
+    min-height: 48px;
+
+    padding: 0 24px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.add-button:hover {
+    background: #125d40;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-wrapper {
+    width: 100%;
+    max-width: 420px;
+
+    height: 45px;
+
+    margin: 22px 0 45px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe4e1;
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 14px;
+}
+
+.search-wrapper span {
+    color: #8a938e;
+    font-size: 20px;
+}
+
+.search-wrapper input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #202824;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TASK DASHBOARD
+========================================= */
+
+.task-dashboard {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 32px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-bottom: 13px;
+    margin-bottom: 16px;
+
+    border-bottom: 1px solid #dce2de;
+}
+
+.section-label {
+    color: #197653;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    margin-bottom: 5px;
+}
+
+.section-header h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 23px;
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+}
+
+.count {
+    padding: 6px 10px;
+
+    border-radius: 15px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.pending-count {
+    background: #e6f2eb;
+    color: #197653;
+}
+
+.completed-count {
+    background: #eeeeee;
+    color: #747d78;
+}
+
+
+/* =========================================
+   TASK LIST
+========================================= */
+
+.task-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+/* =========================================
+   TASK CARD
+========================================= */
+
+.task-card {
+    background: #ffffff;
+
+    border: 1px solid #dfe4e1;
+    border-radius: 9px;
+
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    transition: 0.2s ease;
+}
+
+.task-card:hover {
+    border-color: #b9cdc2;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   COMPLETE BUTTON
+========================================= */
+
+.complete-button {
+    width: 23px;
+    height: 23px;
+
+    flex-shrink: 0;
+
+    border: 1.5px solid #aeb8b2;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+.complete-button:hover {
+    border-color: #197653;
+    background: #e6f2eb;
+}
+
+
+/* =========================================
+   TASK CONTENT
+========================================= */
+
+.task-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-text {
+    color: #28332e;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+.task-time {
+    color: #9aa29e;
+
+    font-size: 9px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   TASK BUTTONS
+========================================= */
+
+.task-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.action-button {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: #7d8681;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.action-button:hover {
+    background: #edf1ee;
+    color: #197653;
+}
+
+.delete-button:hover {
+    background: #fbecec;
+    color: #d54848;
+}
+
+
+/* =========================================
+   EDIT INPUT
+========================================= */
+
+.edit-input {
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 1px solid #197653;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #202824;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 3px 0;
+}
+
+
+/* =========================================
+   COMPLETED TASK
+========================================= */
+
+.completed-section .task-text {
+    color: #9aa29e;
+
+    text-decoration: line-through;
+}
+
+.completed-section .complete-button {
+    background: #197653;
+
+    border-color: #197653;
+
+    color: white;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+    border: 1px dashed #cbd3ce;
+
+    border-radius: 9px;
+
+    padding: 30px 18px;
+
+    text-align: center;
+
+    color: #929b96;
+
+    background: #fbfcfb;
+}
+
+.empty-icon {
+    font-size: 24px;
+
+    margin-bottom: 7px;
+}
+
+.empty-state p {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PRODUCTIVITY
+========================================= */
+
+.productivity-card {
+    background: #202824;
+
+    color: white;
+
+    border-radius: 12px;
+
+    padding: 22px 24px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 65px;
+}
+
+.productivity-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e6f2eb;
+
+    color: #197653;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.productivity-label {
+    color: #919b95;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+.productivity-card h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-top: 3px;
+}
+
+.progress-container {
+    width: 210px;
+
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.progress-bar {
+    height: 5px;
+
+    flex: 1;
+
+    background: #3a443f;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+
+    background: #58a980;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+#progressText {
+    width: 30px;
+
+    color: #aab3ae;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #202824;
+
+    color: #8b9590;
+
+    padding: 21px 5%;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark {
+    background: #121714;
+    color: #edf2ef;
+}
+
+body.dark .theme-button,
+body.dark .add-task-card,
+body.dark .search-wrapper,
+body.dark .task-card {
+    background: #1b231f;
+
+    border-color: #303a35;
+
+    color: #ffffff;
+}
+
+body.dark .theme-button {
+    color: white;
+}
+
+body.dark .input-wrapper input,
+body.dark .search-wrapper input {
+    color: white;
+}
+
+body.dark .task-text {
+    color: #e4ebe7;
+}
+
+body.dark .section-header {
+    border-color: #303a35;
+}
+
+body.dark .empty-state {
+    background: #171d1a;
+    border-color: #354039;
+}
+
+body.dark .completed-section .task-text {
+    color: #747e78;
+}
+
+body.dark .action-button:hover {
+    background: #29332e;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .task-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .completed-section {
+        margin-top: 5px;
+    }
+
+    .progress-container {
+        width: 180px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        width: 88%;
+    }
+
+    .container {
+        width: 88%;
+    }
+
+    .date {
+        display: none;
+    }
+
+    .intro {
+        padding-top: 42px;
+    }
+
+    .intro h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .add-task-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-wrapper {
+        min-height: 48px;
+    }
+
+    .add-button {
+        width: 100%;
+    }
+
+    .search-wrapper {
+        max-width: none;
+    }
+
+    .section-header h2 {
+        font-size: 21px;
+    }
+
+    .task-card {
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        flex-shrink: 0;
+    }
+
+    .productivity-card {
+        flex-wrap: wrap;
+        padding: 21px;
+    }
+
+    .progress-container {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 7px;
+    }
+}
+
